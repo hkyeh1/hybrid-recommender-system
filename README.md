@@ -128,10 +128,6 @@ hybrid-recommender-system/
 - **Visualization**: matplotlib, seaborn
 - **Utilities**: tqdm, joblib
 
-### Computational Requirements
-- **Memory**: ~4GB RAM recommended for full dataset processing
-- **Time**: ~30-45 minutes for complete pipeline execution
-- **Storage**: ~500MB for data and model files
 
 ## 📝 Notebook Contents
 
@@ -149,13 +145,6 @@ The notebook is organized into clear sections:
 
 Each section includes detailed explanations, code implementation, and result analysis.
 
-## 🤝 Contributing
-
-Feel free to fork this repository and submit pull requests for improvements. Areas for contribution:
-- Performance optimizations
-- Additional evaluation metrics
-- Extended feature engineering
-- Alternative model architectures
 
 ## 📚 References
 
