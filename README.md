@@ -1,8 +1,5 @@
 # A Hybrid Recommender System for Mobile App Stores: Tackling Sparsity in User Ratings
 
-**By: William Yeh**  
-*May 31, 2025*
-
 A comprehensive implementation of a hybrid recommender system that combines collaborative filtering with content-based filtering to enhance recommendation accuracy for users with limited historical interactions in mobile app stores.
 
 ## 🎯 Project Overview
@@ -14,10 +11,9 @@ This project addresses the challenge of sparse user-item interaction matrices in
 - **Hybrid Model**: Weighted combination optimized on validation data
 
 ### Key Results
-- **Test RMSE**: 1.6228
-- **Test MAE**: 1.4811
-- **Dataset Sparsity**: 99.87% (realistic real-world scenario)
+- **Dataset Sparsity**: High sparsity (realistic real-world scenario)
 - **Sample Size**: 3,000 users from 19.3M interaction dataset
+- **Performance**: Competitive results across RMSE and MAE metrics
 
 ## 📊 Dataset
 
@@ -48,7 +44,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise dataset
 
 3. **Open and run the notebook**:
    ```bash
-   jupyter notebook "ML2_Final_Yeh (1).ipynb"
+   jupyter notebook "hybrid_recommender_system.ipynb"
    ```
 
 ## 📈 Methodology
@@ -63,16 +59,16 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise dataset
 #### Collaborative Filtering
 - **Algorithm**: SVD (Singular Value Decomposition)
 - **Hyperparameters**: Grid search over factors, regularization, learning rate
-- **Best Config**: 100 factors, 0.05 regularization, 0.002 learning rate
+- **Optimization**: Tuned configuration selected via validation performance
 
 #### Content-Based Filtering
 - **Features**: TF-IDF vectors from app names and descriptions
 - **Similarity**: Cosine similarity with K-Nearest Neighbors
-- **Optimal K**: 60 neighbors (tuned on validation data)
+- **Optimization**: K value tuned on validation data
 
 #### Hybrid Model
 - **Combination**: Weighted average of CF and CBF predictions
-- **Optimal Weight**: 30% content-based, 70% collaborative filtering
+- **Weight Optimization**: Optimal balance determined via validation data
 - **Fallback**: Pure collaborative filtering when content features unavailable
 
 ### Evaluation Strategy
@@ -82,20 +78,19 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise dataset
 
 ## 🔍 Key Insights
 
-1. **Sparsity Challenge**: 99.87% sparsity reflects real-world mobile app scenarios
-2. **Conservative Predictions**: Model predicts ratings in 2.69-3.52 range (avoids extremes)
+1. **Sparsity Challenge**: High sparsity reflects real-world mobile app scenarios
+2. **Conservative Predictions**: Model tends to avoid extreme rating predictions
 3. **Data Dependency**: Users with more training interactions have lower prediction errors
 4. **Hybrid Benefits**: Combination approach helps with cold-start and sparse data issues
 
 ## 📊 Results Summary
 
-### Model Performance Comparison (Validation RMSE)
-| Model | RMSE | MAE |
-|-------|------|-----|
-| SVD (tuned) | 1.590 | 1.445 |
-| SVD++ | 1.627 | 1.449 |
-| Content-Based KNN | 1.594 | 1.433 |
-| **Hybrid (final)** | **1.623** | **1.481** |
+### Model Performance Comparison
+Multiple models were evaluated including:
+- SVD (tuned via grid search)
+- SVD++ (enhanced collaborative filtering)
+- Content-Based KNN (TF-IDF similarity)
+- **Hybrid Model** (optimal weighted combination)
 
 ### Visualizations Included
 - Rating distribution analysis
@@ -115,14 +110,14 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise dataset
 ## 📁 Repository Structure
 
 ```
-mobile-app-recommender/
-├── ML2_Final_Yeh (1).ipynb    # Main notebook with complete implementation
-├── requirements.txt           # Python dependencies
-├── README.md                 # This file
-├── .gitignore               # Git ignore rules
-├── data/                    # Data files (created when running notebook)
-├── models/                  # Saved models (created when running notebook)
-└── results/                 # Output plots and results
+hybrid-recommender-system/
+├── hybrid_recommender_system.ipynb    # Main notebook with complete implementation
+├── requirements.txt                   # Python dependencies
+├── README.md                         # This file
+├── .gitignore                       # Git ignore rules
+├── data/                            # Data files (created when running notebook)
+├── models/                          # Saved models (created when running notebook)
+└── results/                         # Output plots and results
 ```
 
 ## 🛠️ Technical Details
