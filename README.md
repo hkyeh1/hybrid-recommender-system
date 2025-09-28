@@ -2,7 +2,7 @@
 
 A comprehensive implementation of a hybrid recommender system that combines collaborative filtering with content-based filtering to enhance recommendation accuracy for users with limited historical interactions in mobile app stores.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project addresses the challenge of sparse user-item interaction matrices in mobile app recommendation systems. The hybrid approach combines:
 
@@ -15,14 +15,14 @@ This project addresses the challenge of sparse user-item interaction matrices in
 - **Sample Size**: 3,000 users from 19.3M interaction dataset
 - **Performance**: Competitive results across RMSE and MAE metrics
 
-## 📊 Dataset
+## Dataset
 
 - **Source**: [MobileRec Dataset](https://huggingface.co/datasets/recmeapp/mobilerec) (Hugging Face)
 - **Scale**: 19.3 million user-app interactions
 - **Apps**: ~1,500 unique applications with metadata
 - **Features**: User ratings, timestamps, app descriptions, categories, developer info
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 ```bash
@@ -47,7 +47,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise dataset
    jupyter notebook "hybrid_recommender_system.ipynb"
    ```
 
-## 📈 Methodology
+## Methodology
 
 ### Data Processing
 1. **User Sampling**: Random selection of 3,000 users from the full dataset
@@ -76,14 +76,14 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise dataset
 - **Metrics**: RMSE (primary), MAE (secondary)
 - **Analysis**: Error distribution, user data dependency, prediction range
 
-## 🔍 Key Insights
+## Key Insights
 
 1. **Sparsity Challenge**: High sparsity reflects real-world mobile app scenarios
 2. **Conservative Predictions**: Model tends to avoid extreme rating predictions
 3. **Data Dependency**: Users with more training interactions have lower prediction errors
 4. **Hybrid Benefits**: Combination approach helps with cold-start and sparse data issues
 
-## 📊 Results Summary
+## Results Summary
 
 ### Model Performance Comparison
 Multiple models were evaluated including:
@@ -100,14 +100,14 @@ Multiple models were evaluated including:
 - User data availability vs. error correlation
 - Sample recommendations for users
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - **Scale**: Extend to larger user samples and full dataset
 - **Features**: Add app install counts, update frequency, review sentiment
 - **Models**: Explore neural collaborative filtering approaches
 - **Evaluation**: Address conservative prediction range through loss function tuning
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 hybrid-recommender-system/
@@ -120,7 +120,7 @@ hybrid-recommender-system/
 └── results/                         # Output plots and results
 ```
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Dependencies
 - **Data Processing**: pandas, numpy, datasets (Hugging Face)
@@ -129,7 +129,7 @@ hybrid-recommender-system/
 - **Utilities**: tqdm, joblib
 
 
-## 📝 Notebook Contents
+## Notebook Contents
 
 The notebook is organized into clear sections:
 
@@ -146,7 +146,7 @@ The notebook is organized into clear sections:
 Each section includes detailed explanations, code implementation, and result analysis.
 
 
-## 📚 References
+## References
 
 - [Surprise Library Documentation](https://surprise.readthedocs.io/)
 - [MobileRec Dataset](https://huggingface.co/datasets/recmeapp/mobilerec)
