@@ -150,7 +150,6 @@ Each section includes detailed explanations, code implementation, and result ana
 
 - [Surprise Library Documentation](https://surprise.readthedocs.io/)
 - [MobileRec Dataset](https://huggingface.co/datasets/recmeapp/mobilerec)
-- [Hybrid Recommender Systems: Survey and Experiments](https://link.springer.com/article/10.1007/s10462-013-9406-y)
 
 ---
 
